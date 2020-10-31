@@ -1,0 +1,727 @@
+*{
+    margin: 0;/* reseteo el margen*/
+    padding: 0;/* reseteo el margen interno*/
+    font-style: oblique;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;    
+}
+
+
+#section{
+    padding: 20px;
+}
+
+/*ESTILO DE PRODUCTO*/
+.producto{/*Crear estilo con nombre*/
+    background-color:ivory ;
+    width: 180px;
+    height: 200px;
+    float: left;
+    margin: 5px;
+    border-radius: 10px 0px 10px 0px;
+    text-align: center;
+    margin-top: 15px;
+    padding: 5px;
+    
+    
+}
+.producto img{/*imagen dentro de la clase*/
+    width: 120px;
+    height: 120px;
+    margin: auto;
+    
+}
+.producto h3{/*si encuentra un título en la clase*/
+margin-bottom: 6px;
+}
+.producto img:hover{/*al pasar el mouse sobre la imagen*/
+    filter: brightness(0.5);/*tipo de fitro*/
+    transition: 0.5s;
+}
+.producto img:hover ~p{
+background-color: lightcoral;
+border-radius: 50px;
+}
+/*FIN ESTILO DE PRODUCTO*/
+
+/*ESTILO PARA DIV DENTRO DE TABLE FORMULARIO REGISTRO*/
+div table{
+    
+    background-color:lightblue;
+    border-radius: 10px;
+    padding: 20px;
+    border: 1px solid black;
+    display: inline-flex;    
+}
+/*FORMATO IMÁGENES DE LA GALERIA*/
+
+.galeria img{
+    height: 120px;
+    width: 160px;
+    float: left;
+    border-radius:10px ;
+    padding: 3px;
+}
+/*.galeria img:hover{
+    width: 350px;
+    height: 200px;
+    
+}*/
+ 
+/*.transition {
+    -webkit-transform: scale(1.8); 
+    -moz-transform: scale(1.8);
+    -o-transform: scale(1.8);
+    transform: scale(1.8);
+}*/
+/*INICIO LOGIN*/
+.login{    
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    background: lightblue;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-inline: 35%;
+    width: 40%; 
+    margin-left: 30%;
+}
+
+/*Registro de insumos*/
+.regInsumos{    
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    background: lightblue;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-inline: 35%;
+    width: 40%; 
+    margin-left: 30%;
+    
+}
+
+/*REGISTRO DE USUARIOS*/
+.regUsuario{    
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    background: lightblue;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-inline: 35%;
+    width: 40%; 
+    margin-left: 30%;
+    
+}
+.form-group{
+    margin-bottom: 5px;
+}
+
+.form-control{
+    border: 1px solid black;
+    border-radius: 2px;
+    background: rgba(128, 128, 128, 0.562);    
+}
+
+
+.buttons{
+    text-align: center;
+}
+
+
+
+div h1{
+    text-align: center;
+    /*margin-top: 50px;*/
+}
+div h2{
+    text-align: center;
+    margin-top: 15px;
+    margin: 15px;
+}
+/*FORMATO LOGO*/
+.formatologo{
+    height: 240px;
+    width: 240px;
+    margin: auto;
+}
+/*CARRUSEL IMÁGENES*/
+.slider {
+	width: 95%;
+	margin: auto;
+	overflow: hidden;
+}
+.slider ul {
+	display: flex;
+	padding: 0;
+	width: 400%;
+	
+	animation: cambio 15s infinite alternate linear;
+}
+.slider li {
+	width: 100%;
+	list-style: none;
+}
+.slider img {
+    width: 500px;
+    height: 300PX;
+}
+
+
+
+@keyframes cambio {
+	0% {margin-left: 0;}
+	20% {margin-left: 0;}
+	
+	25% {margin-left: -100%;}
+	45% {margin-left: -100%;}
+	
+	50% {margin-left: -200%;}
+	70% {margin-left: -200%;}
+	
+	75% {margin-left: -300%;}
+	100% {margin-left: -300%;}
+}
+
+/*CAMBIO DE CONTENIDO EN INGRESAR*/
+#sectionIngreso{
+    overflow: auto;
+    width:100%;
+    height:90%;
+    background-color: slategray;
+    padding: 20px;
+    border-radius: 15px;
+    margin-top:15px;
+
+}
+/*REISTRO DE INSUMOS*/
+#sectionInsumos{
+    overflow: auto;
+    width:100%;
+    height:100%;
+    background-color: slategray;
+    padding: 20px;
+    border-radius: 15px;
+    margin-top:15px;
+
+}
+/*REGISTRO DE USUARIOS*/
+#sectionRegistro{
+    overflow: auto;
+    width:100%;
+    height:100%;
+    background-color: slategray;
+    padding: 20px;
+    border-radius: 15px;
+    margin-top:15px;
+}
+/*GALERIA*/
+#sectionGaleria{
+    overflow: auto;
+    width:100%;
+    height:100%;
+    background-color: slategray; 
+    padding: 20px;
+    border-radius: 15px;
+    margin-top:15px;
+
+}
+
+
+/*Footer*/
+
+/*Computadora dora la exploradora*/
+@media screen and (min-width: 780px) and (max-width:4000px){
+    
+    
+
+    header{
+        width: 100%;
+        background-color: lightsteelblue;
+        border-radius: 15px;     
+        text-align: center;
+    }
+
+
+    /*Ocultar el checkbox*/
+
+    #btn-nav{
+        display: none;
+    }
+
+    /* caracteristicas de la etiqueta (imagen que representa el checkbox) */
+    label{
+        display: none;
+        width: 50px;
+        height: 50px;
+        padding: 10px;
+        border-right: solid lightsteelblue ;
+        margin-top: 15px;
+    }
+
+    nav label:hover{
+        cursor: pointer;
+        background: rgb(0,0,0, 0.3);
+    }
+
+    .formatologo{
+        padding: 15px;
+    }
+    
+    #contenedor{
+        width: auto;/*ancho*/
+        height: 1100px;/*alto*/
+        background-color: lightslategray;/*color de fondo*/
+        margin: auto;/*definir los margenes del contenido al centro*/
+        padding: 15px; /*margen interno*/
+        overflow: auto;
+    }
+    
+    /* Elementos del menu (la nav)*/
+    .menu ul{
+        margin: 0px;
+        height: 10%;
+        background-color: lightsteelblue;
+        margin-top: 15px;
+        padding: 0px;
+        overflow: auto;
+        list-style: none;
+        display: flex;
+        border-radius: 15px;   
+        
+    }
+
+    .menu li{
+        border-right: solid lightslategray;
+    }
+
+    .menu li a{
+        text-decoration: none;
+        display: block ;
+        padding: 10px 15px;
+        color: black;
+        
+        
+    }
+    
+    .menu li:hover{
+        background-color: rgb(13, 123, 143);
+       /* text-transform: uppercase;*/
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    #contenido{
+        /*overflow: auto;*/ /*genera una barra de scrol*/
+        height: 55%;
+        background-color: lightsteelblue;
+        padding: 20px;
+        border-radius: 15px;
+        margin-top:15px;
+        text-align: center;
+    }
+     /*CONTENIDO REGISTRO*/
+    #contenidoRegistro{
+        /*overflow: auto;*/ /*genera una barra de scrol*/
+        height: 75%;
+        background-color: lightsteelblue;
+        padding: 20px;
+        border-radius: 15px;
+        margin-top:15px;
+        text-align: center;
+    }
+    /*CONTENIDO INSUMOS*/
+    #contenidoInsumos{
+        /*overflow: auto;*/ /*genera una barra de scrol*/
+        height: 58%;
+        background-color: lightsteelblue;
+        padding: 20px;
+        border-radius: 15px;
+        margin-top:15px;
+        text-align: center;
+    }
+
+    
+    #section{
+        overflow: auto;
+        float: left;
+        width:70%;
+        height:90%;
+        background-color: slategray;
+        padding: 20px;
+        border-radius: 15px;
+        margin-top:15px;
+    }
+    
+ 
+
+    #aside{
+        overflow: auto;
+        float: right;
+        width:20%;
+        height:90%;
+        background-color: slategray;
+        padding: 20px;
+        border-radius: 15px;
+        margin-top:15px;
+    }
+    #footer{
+        overflow: auto;
+        height: 20%;
+        background-color: lightsteelblue;
+        border-radius: 15px;
+        padding: 10px;
+        margin-top: 15px;
+        display: flex;
+
+        
+    }
+    #footer div{
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        line-height: 8px;
+    }
+}
+
+/*Tablet*/
+@media screen and (min-width: 480px) and (max-width:780px){
+
+    .menu{
+        position: absolute;
+        background: lightsteelblue;
+        width: 50%;
+        margin-left: -50%;
+        transition: all 0.5s;
+        border-radius: 15px;
+        border-top:0px;
+    }
+
+    
+
+    /*cuando se checkee el chkbox que esta dentro del label la imagen*/
+    #btn-nav:checked ~ .menu{
+        margin: 0;
+    }
+    
+    header{
+        width: 100%;
+        background-color: lightsteelblue;
+        border-radius: 15px; 
+        text-align: center;
+    }
+
+    /*Ocultar el checkbox*/
+
+    #btn-nav{
+        display: none;
+    }
+
+    /* caracteristicas de la etiqueta (btn-nav) */
+    #BloqueMenu{
+        display: block;
+        width: 50px;
+        height: 50px;
+        padding: 10px;
+        border-right: solid lightsteelblue ;
+        margin-top: 15px;
+    }
+
+    #BloqueMenu:hover{
+        cursor: pointer;
+        background: rgb(0,0,0, 0.3);
+    }
+
+    .formatologo{
+        padding: 15px;
+    }
+    
+    #contenedor{
+        width: auto;/*ancho*/
+        height: 1100px;/*alto*/
+        background-color: lightslategray;/*color de fondo*/
+        margin: auto;/*definir los margenes del contenido al centro*/
+        margin-top: 15px;/*margen superior*/
+        padding: 3px; /*margen interno*/
+        overflow: auto;
+    }
+    
+    /* Elementos del menu (la nav)*/
+    .menu ul{
+        flex-direction: column;
+        margin: 0px;
+        height: 10%;
+        background-color: lightsteelblue;
+        margin-top: 15px;
+        padding: 0px;
+        overflow: auto;
+        list-style: none;
+        display: flex;
+        border-radius: 15px;   
+    }
+
+    .menu li{
+        
+        border-top: solid 1px white;
+    }
+
+    .menu li a{
+        text-decoration: none;
+        display: block;
+        padding: 10px 15px;
+        color: black;
+        
+    }
+    
+    .menu li:hover{
+        background-color: rgb(13, 123, 143);
+       /* text-transform: uppercase;*/
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    #contenido{
+        /*overflow: auto;*/ /*genera una barra de scrol*/
+        height: 55%;
+        background-color: lightsteelblue;
+        padding: 20px;
+        border-radius: 15px;
+        margin-top:15px;
+        text-align: center;
+    }
+    /*CONTENIDO REGISTRO*/
+    #contenidoRegistro{
+        /*overflow: auto;*/ /*genera una barra de scrol*/
+        height: 75%;
+        background-color: lightsteelblue;
+        padding: 20px;
+        border-radius: 15px;
+        margin-top:15px;
+        text-align: center;
+    }
+    /*CONTENIDO INSUMOS*/
+    #contenidoInsumos{
+        /*overflow: auto;*/ /*genera una barra de scrol*/
+        height: 58%;
+        background-color: lightsteelblue;
+        padding: 20px;
+        border-radius: 15px;
+        margin-top:15px;
+        text-align: center;
+    }
+    #section{
+        overflow: auto;
+        float: left;
+        width:47%;
+        height:90%;
+        background-color: slategray;
+        padding: 20px;
+        border-radius: 15px;
+        margin-top:15px;
+    }
+    #aside{
+        overflow: auto;
+        float: right;
+        width:31%;
+        height:90%;
+        background-color: slategray;
+        padding: 20px;
+        border-radius: 15px;
+        margin-top:15px;
+    }
+
+    #footer{
+        overflow: auto;
+        height: 20%;
+        background-color: lightsteelblue;
+        border-radius: 15px;
+        padding: 10px;
+        margin-top: 15px;
+        display: flex;
+        
+    }
+
+    #footer div{
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        line-height: 8px;
+    }
+    .producto{
+        margin: auto;
+	    overflow: hidden;
+    }
+}
+
+/*Celulares*/
+@media screen and (max-width: 480px){
+    
+    #BloqueMenu{
+        display: block;
+        width: 50px;
+        height: 50px;
+        padding: 10px;
+        border-right: solid lightsteelblue ;
+        margin-top: 15px;
+    }
+
+    #BloqueMenu:hover{
+        cursor: pointer;
+        background: rgb(0,0,0, 0.3);
+    }
+
+
+    label{
+        display: block;
+    }
+
+    .menu{
+        position: absolute;
+        background: lightsteelblue;
+        width: 50%;
+        margin-left: -50%;
+        transition: all 0.5s;
+    }
+
+    .menu ul{
+        flex-direction: column;
+    }
+
+    /*cuando se checkee el chkbox que esta dentro del label la imagen*/
+    #btn-nav:checked ~ .menu{
+        margin: 0;
+    }
+    
+    header{
+        width: 100%;
+        background-color: lightsteelblue;
+        border-radius: 15px;
+        text-align: center;
+    }
+
+    /*Ocultar el checkbox*/
+
+    #btn-nav{
+        display: none;
+    }
+
+    /* caracteristicas de la etiqueta (btn-nav) */
+    label{
+        display: none;
+        width: 50px;
+        height: 50px;
+        padding: 10px;
+        border-right: solid lightsteelblue ;
+        margin-top: 15px;
+
+    }
+
+    label:hover{
+        cursor: pointer;
+        background: rgb(0,0,0, 0.3);
+    }
+
+    .formatologo{
+        padding: 15px;
+    }
+    
+    #contenedor{
+        width: auto;/*ancho*/
+        height: 1100px;/*alto*/
+        background-color: lightslategray;/*color de fondo*/
+        margin: auto;/*definir los margenes del contenido al centro*/
+        margin-top: 15px;/*margen superior*/
+        padding: 3px; /*margen interno*/
+        overflow: auto;
+    }
+    
+    /* Elementos del menu (la nav)*/
+    .menu ul{
+        margin: 0px;
+        height: 10%;
+        background-color: lightsteelblue;
+        margin-top: 15px;
+        padding: 0px;
+        overflow: auto;
+        list-style: none;
+        display: flex;
+        border-radius: 15px;   
+    }
+
+    .menu li{
+        border-right: solid lightslategray;
+    }
+
+    .menu li a{
+        text-decoration: none;
+        display: block;
+        padding: 10px 15px;
+        color: black;
+        
+    }
+    
+    .menu li:hover{
+        background-color: rgb(13, 123, 143);
+       /* text-transform: uppercase;*/
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    #contenido{
+        /*overflow: auto;*/ /*genera una barra de scrol*/
+        height: 55%;
+        background-color: lightsteelblue;
+        padding: 20px;
+        border-radius: 15px;
+        margin-top:15px;
+        text-align: center;
+    }
+    /*CONTENIDO REGISTRO*/
+    #contenidoRegistro{
+        /*overflow: auto;*/ /*genera una barra de scrol*/
+        height: 75%;
+        background-color: lightsteelblue;
+        padding: 20px;
+        border-radius: 15px;
+        margin-top:15px;
+        text-align: center;
+    }
+    /*CONTENIDO INSUMOS*/
+    #contenidoInsumos{
+        /*overflow: auto;*/ /*genera una barra de scrol*/
+        height: 58%;
+        background-color: lightsteelblue;
+        padding: 20px;
+        border-radius: 15px;
+        margin-top:15px;
+        text-align: center;
+    }
+    #section{
+        overflow: hidden;
+        float: left;
+        width:45%;
+        height:90%;
+        background-color: slategray;
+        padding: 20px;
+        border-radius: 15px;
+        margin-top:15px;
+    }
+    #aside{
+        overflow: hidden;
+        float: right;
+        width:32%;
+        height:90%;
+        background-color: slategray;
+        padding: 20px;
+        border-radius: 15px;
+        margin-top:15px;
+    }
+    #footer{
+        overflow: auto;
+        height: 20%;
+        background-color: lightsteelblue;
+        border-radius: 15px;
+        padding: 10px;
+        margin-top: 15px;
+        display: flex;
+        
+    }
+
+    #footer div{
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        line-height: 8px;
+    }
+}

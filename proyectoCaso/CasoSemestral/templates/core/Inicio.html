@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static%}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lavado de Autos</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/Estilo.css' %}">
+    <link href="{% static 'dist/css/lightbox.min.css' %}" rel="stylesheet" />
+</head>
+<body>
+    <div id="contenedor">        
+        
+        
+        <header>
+            
+            <h1>LAVADO DE AUTOS</h1>
+                <img class="formatologo"src="{% static 'img/logo_sinfondo.png' %}"> 
+        </header>
+    
+    <!-- se crea un checkbox, que servira como un boton de accion -->
+      <input type="checkbox" name="" id="btn-nav">
+      <label id="BloqueMenu" for="btn-nav">
+        <img src="{% static 'img/menu.png' %}" width="50px" height="50px" alt="">
+      </label>
+
+        <!-- Menu Principal -->
+          <nav class="menu"> <!--barra de navegación-->
+            
+
+              <ul><!---Lista ordenada-->
+                  <li><a href="{% url 'INDEX'%}">Inicio</a></li>
+                                   
+                  <li><a href="{% url 'QUIEN'%}">Quienes Somos</a></li>    
+                  <li><a href="{% url 'UBI'%}">Ubicación</a></li>         
+                  <li><a href="{% url 'GALE'%}">Galeria</a></li>  
+                  
+                  {% if user.is_authenticated %}
+                      {% if request.user.is_staff %}
+                        <li><a href="{% url 'INSU'%}">Insumos</a></li>  
+                        <li><a href="{% url 'LOGOUT'%}">Cerrar Sesión</a></li> 
+                        <li><a href="">Bienvenido: {{user.first_name}} {{user.last_name}}</a></li> 
+                      {%else%}
+                        <li><a href="{% url 'LOGOUT'%}">Cerrar Sesión</a></li> 
+                        <li><a href="">Bienvenido: {{user.first_name}} {{user.last_name}}</a></li> 
+                      {%endif%}
+                  {% else %}
+                      <li><a href="{% url 'REG'%}">Registro</a></li> 
+                      <li><a href="{% url 'INGRE'%}">Ingresar</a></li>
+                  {% endif %}    
+              </ul>
+          </nav>
+        
+        <div id="contenido">
+          <div id="section">
+              <div><h2>Nosotros</h2></div>
+              
+              <div class="slider">
+                <ul>
+                  
+                  {% for item in lista_imagenes_slider %}
+                  <li>
+                    <img src="{{item.imagenSlider.url}}" alt="">
+                  </li>
+                  {% endfor %}
+                </ul>
+              </div>
+          </div>
+              
+          <div id="aside">
+            <div class="producto">
+              <h3>Servicios</h3>
+              <a href="{% static 'img/Servicios Lavado.jpg' %}" data-lightbox="imagen-1" data-title="servicios">
+              <img src="{% static 'img/Servicios.png' %}" >      
+            </a>       
+          </div>
+          </div>
+        </div>  
+        <div id="footer">
+          <div><p><u>Navegación</u></p><br>
+            <p><a href="{% url 'INDEX'%}">Inicio </a></p>           
+            <p><a href="{% url 'QUIEN'%}">Quienes Somos</a></p>    
+            <p><a href="{% url 'UBI'%}">Ubicación</a></p>         
+            <p><a href="{% url 'GALE'%}">Galeria</a></p>  
+            
+            {% if user.is_authenticated %}
+                {% if request.user.is_staff %}
+                  <p><a href="{% url 'INSU'%}">Insumos</a></p>             
+                {%endif%}
+            {% else %}
+                <p><a href="{% url 'REG'%}">Registro </a></p>
+                <p><a href="{% url 'INGRE'%}">Ingresar</a></p>
+            {% endif %}    
+          
+          </div>
+
+          <div><p><u>Horarios</u></p><br>
+            <p>LU – 09:00 a 19:00 hrs.</p> 
+            <p>Ma – 09:00 a 19:00 hrs.</p> 
+            <p>Mi – 09:00 a 19:00 hrs.</p> 
+            <p>Ju – 09:00 a 19:00 hrs.</p> 
+            <p>Vi – 09:00 a 19:00 hrs.</p> 
+            <p>Sa – 09:00 a 19:00 hrs.</p> 
+            <p>Do – 09:00 a 19:00 hrs.</p> 
+
+          </div>
+
+          <div><p><u>Contacto</u></p><br>
+            <h3>Telefono-Whatsapp</h3>
+            <h4>+569 12345678</h4><br>
+            <p>contacto@lavadodeautos.com</p>
+
+          </div>
+        </div>
+    </div>  
+      
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+      <script src="{% static 'dist/js/lightbox-plus-jquery.min.js' %}"></script>
+</body>
+</html>
